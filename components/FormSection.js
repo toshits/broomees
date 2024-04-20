@@ -77,6 +77,13 @@ const FormSection = () => {
                 return
             }
 
+            setFirstName('')
+            setLastName('')
+            setEmail('')
+            setUsername('')
+            setPassword('')
+            setConfirmPassword('')
+            
             toast.success('Your form has been submitted')
 
         } catch (error) {
