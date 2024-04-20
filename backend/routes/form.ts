@@ -9,9 +9,9 @@ const formSchema = z.object({
     firstName: z.string({ required_error: 'First name is requested', invalid_type_error: 'First name must be a string' }).min(3, 'First name should be atleast 3 charaters long'),
     lastName: z.string({ required_error: 'Last name is requested', invalid_type_error: 'Last name must be a string' }).min(3, 'Last name should be atleast 3 charaters long'),
     email: z.string({ required_error: 'Email is requested', invalid_type_error: 'Email must be a string' }).email('Must be valid email'),
-    username: z.string({ required_error: 'Usernaem is requested', invalid_type_error: 'Username must be a string' }).min(4, 'Username should be atleast 4 charaters long'),
+    username: z.string({ required_error: 'Username is requested', invalid_type_error: 'Username must be a string' }).min(4, 'Username should be atleast 4 charaters long'),
     password: z.string({ required_error: 'Password is requested', invalid_type_error: 'Password must be a string' }).min(4, 'Password should be atleast 4 charaters long'),
-    confirmPassword: z.string({ required_error: 'Confirm Password is requested', invalid_type_error: 'Confirm Password must be a string' }).min(4, 'Password should be atleast 4 charaters long')
+    confirmPassword: z.string({ required_error: 'Confirm Password is requested', invalid_type_error: 'Confirm Password must be a string' }).min(4, 'Confirm Password should be atleast 4 charaters long')
 }).superRefine(({ password, confirmPassword }, ctx) => {
     if (password !== confirmPassword) {
         ctx.addIssue({
