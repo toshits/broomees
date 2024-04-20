@@ -6,6 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "setup": "npm install && next build && cd backend && npm i && npx prisma migrate deploy && npx tsc",
+    "start:backend": "cd backend && node dist/server.js",
+    "start:both": "concurrently \"npm run start\" \"npm run start:backend\"",
     "lint": "next lint"
   },
   "dependencies": {
@@ -16,6 +19,7 @@
     "zod": "^3.22.5"
   },
   "devDependencies": {
+    "concurrently": "^8.2.2",
     "eslint": "^8",
     "eslint-config-next": "14.2.2"
   }
