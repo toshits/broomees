@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "start http://localhost:3000 && next start",
     "setup": "npm install && next build && cd backend && npm i && npx prisma migrate deploy && npx tsc",
     "start:backend": "cd backend && node dist/server.js",
     "start:both": "concurrently \"npm run start\" \"npm run start:backend\"",
