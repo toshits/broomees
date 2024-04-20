@@ -93,7 +93,7 @@ const FormSection = () => {
                 <div className={styles.formHeroContainer}>
                     <h2>Altitude Air</h2>
                     <div className={styles.divider}></div>
-                    <p>We promise to ensure that your well-being is taken care of while travelling with us. Boasting top in class fleet inventory and a 5 star approval for our in-flight experience, you know you're getting the best from Altitude with no attitude.</p>
+                    <p>We promise to ensure that your well-being is taken care of while travelling with us. Boasting top in class fleet inventory and a 5 star approval for our in-flight experience, you know you&apos;re getting the best from Altitude with no attitude.</p>
                 </div>
             </div>
             <div className={styles.formContainer}>
